@@ -1,0 +1,17 @@
+{
+  "name": "@hexput-demo/server",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.0",
+    "hexput": "^1.0.3",
+    "hono": "^4.7.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
+  }
+}
