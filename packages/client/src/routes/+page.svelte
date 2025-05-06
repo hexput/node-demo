@@ -162,7 +162,7 @@
   }
 
   function updateJsonView(jsonData: any) {
-    const jsonString = JSON.stringify(jsonData?.result || jsonData, null, 2);
+    const jsonString = JSON.stringify(jsonData?.result ?? jsonData?.error ?? jsonData, null, 2);
     
     if (resultView) {
       resultView.destroy();
@@ -208,7 +208,7 @@
           <label for="code" class="block text-sm font-medium text-gray-700">Your Code</label>
           <div class="mt-1">
             <!-- CodeMirror editor container with resizable attribute -->
-            <div 
+            <div
               bind:this={editorElement} 
               class="editor-container border border-gray-300 rounded-md overflow-hidden"
             ></div>
